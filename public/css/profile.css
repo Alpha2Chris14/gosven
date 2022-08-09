@@ -1,0 +1,68 @@
+
+.fruit-section > section {
+    background-color: #ffffff;
+    box-shadow: 4px 4px 4px rgb(0 0 0 0.25);
+    width: 100%;
+}
+
+.fruit-section > section > div {
+    width: 100%;
+   
+}
+
+.inner-profile {
+    padding: 1.5rem 0;
+    padding-left: 3rem;
+    display: flex;
+}
+
+
+.inner-profile > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pull-right {
+    background-color: #639860;
+    color: #ffffff;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.profile-header {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.profile-label {
+    font-size: 1.5rem;
+}
+
+.profile-input {
+    font-size: 1.4rem;
+}
+
+@media screen and (max-width: 768px) {
+    .fruit-section {
+        display: flex;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    .fruit-section > section {
+        max-width: 80%;
+    }
+
+    .inner-profile {
+        padding: 2rem 4rem;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .inner-profile {
+        flex-direction: column;
+    }
+    
+}

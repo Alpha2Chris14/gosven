@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An online shop to buy your agricultural products including food stuff, farm tools,
+    raw foods, farm machineries">
+    <meta name="keywords" content="Agricultural products, Agro, E-Commerce, shop, online store, 
+    food stuff, Marketlada, buy, raw foods, farm tools, farm machineries">
+    <title>Upload your products</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ribeye&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body class="general-style">
+    <div class="container verify-page upload-page user-icon">
+        <div class="child-container">
+            <header class="mobile-header desktop-top-header">
+                <div class="first-part-header">
+                    @include('partials.frontend._cartii')
+                    <div class="mobile-logo-search-container">
+                        @include('partials.frontend._searchiii')
+                    </div>
+                    @include('partials.frontend._navbarii')
+                </div>   
+            </header>
+            <main class="similar-main">
+                @include('partials.frontend.sidebarii')
+                <section class="verify-section">
+                    <div class="page-title-container">
+                        <hr>
+                        <h1>Upload</h1>
+                        <hr>
+                    </div>
+                    <div class="content">
+                        <form action= "{{ route('product.update',$product->id) }}" enctype="multipart/form-data" method="post" class="similar-form">
+                            {{ csrf_field() }}
+                    {{method_field('PUT')}}@csrf
+                            <div>
+                                <label for="product-name" class="input-labels">Name of Product</label>
+                                <input type="text" name="name" value="{{$product->name}}" id="product-name" placeholder="" class="input-field" required>
+                                <div class="share-width-input">
+                                    <div>
+                                        <label for="price" class="input-labels">Price</label>
+                                        <input type="text" name="price" value="{{$product->price}}" id="price" placeholder="" class="input-field" required>
+                                    </div>
+                                    <div>
+                                        <label for="previous-price" class="input-labels">Previous Price</label>
+                                        <input type="text" name="previous" value="{{$product->previous}}" id="previous-price" placeholder="" class="input-field" required>
+                                    </div>
+                                </div>
+                                <div class="share-width-input">
+                                    <div>
+                                        <label for="unit" class="input-labels">Unit</label>
+                                        <select name="unit" id="unit" class="input-field">
+                                            @foreach ($units as $unit)
+                                            <option value="{{ $unit->name }}">{{ $unit->name }}</option>
+                                            @endforeach  
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="quantity" class="input-labels">Quantity</label>
+                                        <input type="number" name="quantity" value="{{$product->quantity}}" id="quantity" placeholder="" class="input-field" required>
+                                    </div>
+                                </div>
+                                <div class="share-width-input">
+                                    <div>
+                                        <label for="category" class="input-labels">Category</label>
+                                        <select name="category" id="category" class="input-field">
+                                            @foreach ($categorys as $category)
+                                            <option value="{{ $category->name }}">{{ $category->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div> 
+                                    <div>
+                                        <label for="upload-img" class="input-labels">Upload Image</label>
+                                        <input type="file" name="image" value="{{$product->image}}" id="upload-img" placeholder="" class="input-field file-upload" required>
+                                    </div>
+                                </div>
+                                <div class="share-width-input">
+                                    <div>
+                                        <label for="upload-video" class="input-labels">Upload Video</label>
+                                        <input type="file" value="{{$product->featured_video}}" name="featured_video" id="upload-video" placeholder="" class="input-field file-upload" required>
+                                    </div>
+                                    <div>
+                                        <label for="weight" class="input-labels">Weight</label>
+                                        <input type="text" value="{{$product->weight}}" name="weight" id="about-farm" placeholder="" class="input-field" required>
+                                    </div>
+                                </div>   
+                                <label for="description" class="input-labels">Description</label>
+                                <textarea name="description" id="description" rows="3" class="input-field">{{$product->description}}</textarea>
+                            </div>
+                                
+                                <div class="upload-btn-container">
+                                    <input type="reset" value="reset" class="upload-btn upload-reset-btn">
+                                    <input type="submit" value="Upload" class="similar-buttons upload-btn">
+                                </div>
+                            </div> 
+                        </form>
+                    </div>
+                </section>
+            </main>
+        </div>         
+    </div>
+    @include('partials.frontend._footerii')
+    <script src="/js/script.js"></script>
+    <script src="/js/user.js"></script> 
+</body>
+</html>

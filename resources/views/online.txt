@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>check out</title>
+    <link rel="stylesheet" href="/bootsfile/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&family=Montserrat&family=Oswald&family=Ribeye&family=Unna&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body class="container-fluid p-0" id="boot-override">
+    <header class="desktop-header container-fluid">
+    @include('partials.frontend._navbar')
+        
+            @include('partials.frontend._searchii')
+        
+    </header>
+    <main class="container-fluid ">
+            <div class="fruit-heading">
+                <img src="/icons/letfArrow.svg" alt="leftArrow" class="leftArrow">
+                <img src="/icons/letfArrow.svg" alt="leftArrow" class="leftArrow">
+                <hr>
+                <h1>Pay Online</h1>
+                <hr>
+            </div> 
+            <?php $total = 0; ?>
+            
+            @foreach((array) session('cart') as $id => $details)
+                                    <?php $total += $details['price'] * $details['quantity'] ?>
+                                @endforeach
+                                <?php $refId = 0; ?>
+                                <?php $refId = "Gosven_TRx".time().uniqid(mt_rand(),true); ?>
+            
+            <div class="section-anime">
+            <section class="login-section">
+            <form action="{{route('pay')}}" method="POST">
+            {{ csrf_field() }}
+                    <picture>
+                        <source srcset="/icons/gsvlogin.svg" media="(min-width: 768px)" class="gsvlogin-icon">
+                        <source srcset="/icons/gsvloginmble.svg" media="(min-width:280px)" class="gsvlogin-icon">
+                        <img src="/icons/gsvlogin.svg" alt="Govera Steadfast Ventures icon" class="gsvlogin-icon">
+                    </picture>
+                    <section>
+                        <h2 class="checkout-heading"><label for="telPhone">Phone number</label></h2>
+                        <!-- <p>(Already have an account &nbsp;<a href="">login</a>)</p> -->
+                        <input type="tel" name="phonenumber" id="telPhone" class="checkout-input" placeholder="Enter phone number">
+                    </section>
+                    <hr class="checkout-hr" id="section-cout-hr">
+                    <section>
+                        <h2 class="checkout-heading">Shipping</h2>
+                        <div>
+                            <input type="hidden" value="{{$total}}" name="amount" id="" class="checkout-input">
+                            <input type="hidden" name="payment_method" value="both" /> 
+                            <input type="hidden" name="description" value="Just Another Online Order" />
+                            <input type="hidden" name="country" value="NG" /> <!-- Replace the value with your transaction country -->
+                            <input type="hidden" name="currency" value="NGN" />
+                            <input type="text" name="firstname" id="" placeholder="First Name" class="checkout-input">
+                            <input type="text" name="lastname" id="" placeholder="Last Name" class="checkout-input">
+                            <input type="text" name="email" id="" placeholder="Enter Email" class="checkout-input">
+                            <input type="hidden" name="paymentplan" value="362" /> <!-- Ucomment and Replace the value with the payment plan id -->
+                            <input type="hidden" name="ref" value="{{$refId}}" /> <!-- Ucomment and  Replace the value with your transaction reference. It must be unique per transaction. You can delete this line if you want one to be generated for you. -->
+                            <input type="hidden" name="logo" value="http://localhost:8000/icons/gsvlogin.svg"/>
+                            <input type="hidden" name="title" value="Gosven" /> <!-- Replace the value with your transaction title (Optional, present in .env) -->
+                            
+                            
+                            <input type="text" name="address" id="" placeholder="Address" class="checkout-input">
+                            <input type="text" name="state" id="" placeholder="State: Portharcourt" class="checkout-input" 
+                            value="Portharcourt">
+                            <input type="text" name="city" id="" placeholder="City" class="checkout-input">
+                        </div>
+                        <div id="strict-note">
+                            <p>note:</p>
+                            <p>Due to Govera's SteadFast Ventures cashless policy support measures, all payment
+                            on delivery will be conducted with P.O.S machines. No logistic personnel is allowed
+                            to collect cash.
+                            </p>
+                        </div>
+                        <p id="delivery-time">Time of delivery &nbsp; <span></span>Hours</p>
+                        <hr class="checkout-hr">
+                        <div id="payment-contain">
+                            <p>Payment</p>
+                            <div>
+                                <div>
+                                    <span>Cost of goods</span>
+                                    <span>1000</span>
+                                </div>
+                                <div>
+                                    <span>Cost of delivery</span>
+                                    <span>500</span>
+                                </div>
+                                
+                                
+                                <div id="payment-total-contain">
+                                    <span>Total</span>
+                                    <span>&#8358;{{$total}}</span>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div id="checkout-buttons-contain">
+                            <button>Pay Now</button>
+                            <!-- <a href="">pay with card</a> -->
+                        </div>
+
+                    </section>  
+            </form>
+            </section>
+            <img src="/images/checkanime.svg" alt=""> 
+            </div>
+    </main>
+    <footer class="container-fluid p-0">
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> 
+    <script src="/bootsfile/js/bootstrap.min.js" ></script>
+    <script src="{{url('js/uni.js')}}"></script>
+    <script src="{{url('js/index.js')}}"></script>
+    <script src="{{url('js/quantity.js')}}"></script>
+    <script type="text/javascript">
+        $(".update-cart").click(function (e) {
+           e.preventDefault();
+           var ele = $(this);
+            $.ajax({
+               url: '{{ url('update-cart') }}',
+               method: "patch",
+               data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
+               success: function (response) {
+                   window.location.reload();
+               }
+            });
+        });
+        $(".remove-from-cart").click(function (e) {
+            e.preventDefault();
+            var ele = $(this);
+            if(confirm("Are you sure")) {
+                $.ajax({
+                    url: '{{ url('remove-from-cart') }}',
+                    method: "DELETE",
+                    data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
+                    success: function (response) {
+                        window.location.reload();
+                    }
+                });
+            }
+        });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- plugins:js -->
+  <script src="{{ url('vendors/base/vendor.bundle.base.js') }}"></script>
+  <!-- End custom js for this page-->
+</body>
+</html>

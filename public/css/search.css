@@ -1,0 +1,109 @@
+body {
+    height: 100%;
+    background-color: rgb(229, 229, 229);
+}
+
+#search-section > div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+}
+
+/* for star ratings */
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-family: FontAwesome;
+  }
+  
+  .stars-outer::before {
+    content: "\f006 \f006 \f006 \f006 \f006";
+  }
+  
+  .stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+  }
+  
+  .stars-inner::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    color: #f8ce0b;
+}
+
+/* End of star rating */
+
+
+.fruit-section {
+    float: none;
+    width: 100%;
+}
+
+div > .each-fruit-section {
+    padding: 1rem 2rem 4rem 2rem;
+    margin-bottom: 2rem;
+    background-color: #eeeaea;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.each-fruit-section > div {
+    width: 100%;
+}
+
+.fruit-heading > h1 {
+    min-width: 13rem;
+    text-align: center;
+}
+
+
+.fruit-category {
+    width: 100%;
+    margin-bottom: 2rem; 
+    background-color: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
+}
+
+.fruit-category > div > a >  img {
+    height: 17.2rem;
+}
+
+#boot-override .search-add-cart {
+    margin-top: 0;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.7rem;
+    color: #212529;
+}
+
+#boot-override .search-add-cart:hover {
+    background-color: rgba(99, 152, 96, 0.1);
+}
+
+#boot-override .search-add-cart:active {
+    background-color: #639860;
+    border: 1px solid #639860;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+    div > .each-fruit-section {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 553px) {
+    .fruit-category > div > a > img {
+        height: 13.5rem;
+        width: 11.0rem;
+    }
+
+    #boot-override .search-add-cart {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        padding: 0.1rem 0.5rem;
+    }
+}
+

@@ -1,0 +1,84 @@
+
+@extends('layouts.app')
+@if($control == 2)
+@section('content')
+    <div class="content-wrapper">
+          <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  @include('partials._messages')
+                  <h4 class="card-title">All Product</h4>
+                  <p class="card-description">
+                    <a class="btn btn-outline-primary" href="{{ route('product.create') }}">Create New Product</a>
+                  </p>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Product Name</th>
+                          <th>Price</th>
+                          <th>previous</th>
+                          <th>Category</th>
+                          <th>Unit</th>
+                          <th>Image</th>
+                          <th>Video</th>
+                          <th>Quantity</th>
+                          <th>Description</th>
+                          <th>Created</th>
+                          <th>Updated</th>
+                          <th></th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      @foreach($product as $product)
+                      @if($product->userInfo == Auth::user()->id)
+                        <tr>
+                          <td>{{ $product->name }}</td>
+                          <td>{{ $product->price }}</td>
+                          <td>{{ $product->previous }}</td>
+                          <td>{{ $product->category }}</td>
+                          <td>{{ $product->weight }} {{ $product->unit }}</td>
+                          <td><a href="/products/images/{{$product->image}}">{{ $product->image }}</a></td>
+                          <td>{{ $product->featured_video }}</td>
+                          <td>{{ $product->quantity }}</td>
+                          <td>{{ $product->description }}</td>
+                          <td>{{ $product->created_at }}</td>
+                          <td>{{ $product->updated_at }}</td>
+                          <td>
+                            <td>
+                            
+                                <a href="#"type="button" class="btn btn-sm btn-dark btn-icon-text" style="color:white">
+                                  Edit
+                                  <i class="ti-file btn-icon-append"></i>                          
+                                </a>
+                            </td>
+                            <td>
+                                <form action ="{{Route('product.destroy',$product->id)}}" method="POST" >
+                                      @csrf
+                                      {{method_field('DELETE')}}
+                                      <button class="btn btn-sm btn-danger btn-icon-text item" title="Delete">
+                                        <i class="ti-alert btn-icon-prepend"></i>                                                    
+                                        Delete
+                                      </button>
+                                </form>
+
+                                
+                            </td>
+                          </td>
+                        </tr>
+                        @endif
+                      @endforeach
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    @else
+    <h1>You Are Not Suppose To Be Here</h1>
+    @endif
+@endsection

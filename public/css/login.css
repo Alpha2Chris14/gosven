@@ -1,0 +1,423 @@
+html {
+    height: 100%;
+}
+
+#boot-override {  /*changed body to #boot-override*/
+    background-color: #E5E5E5;
+    padding: 0 0 2rem 0;  /*new update*/
+}
+
+#boot-override main {  /*added #boot-override to main*/
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+#boot-override .invalid-feedback {
+    font-size: 1.2rem;
+}
+
+button:focus {
+    outline: none;
+}
+
+.fruit-heading {
+    width: 100%;
+    padding: 0.2rem 0.5rem;   /*new update*/
+}
+
+
+/*new update*/
+.fruit-heading > hr {
+    width: 47%; 
+}
+/* end of update */
+
+.gsvlogin-icon {
+    margin-bottom: 0.5rem;
+}
+
+#login-anime-contain {
+    max-width: 80%;
+}
+
+#login-anime {
+    display: none;
+}
+
+.login-section {
+    background-color: #FFFFFF;
+    padding: 1.5rem 6rem 8rem 6rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.login-section > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-section > div > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-section > div > form > input {
+    display: block;
+    margin-bottom: 1.2rem;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+    width: 35rem;
+    max-width: 100%;
+    background-color: #f1eeee;
+    border: 1px solid #f1eeee;
+    border-radius: 10px; 
+    font-size: 1.5rem;
+}
+
+
+
+.login-section > div > form >  input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.3rem;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    font-weight: bold;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    font-weight: bold;
+  }
+
+.login-section > div > form > div:nth-of-type(1) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#boot-override .login-fg-pass > a{
+    color: rgb(114, 114, 167);
+    font-size: 1.2rem;
+}
+
+.login-section > div > form > div:nth-of-type(1) > button {
+    font-size: 1.4rem;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#fpassword {
+    font-weight: bold;
+    color: #000000;
+}
+
+#signup {
+    color: #6E577D;
+    font-weight: 600;
+}
+
+.login-Signup-button {
+    margin-top: 2.4rem;
+    background-color: #639860;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 0.5rem 2.6rem;
+    text-align: center;
+    font-size: 1.4rem
+}
+
+.login-Signup-button:hover {
+    color: #FFFFFF;
+    position: relative;
+    top: -2px;
+    background-color: #639860; 
+}
+
+.login-Signup-button:active {
+    color: #000000;
+    background-color: #639860; 
+}
+
+.login-Signup-button:focus {
+    outline: 0;
+}
+
+.login-section > div > form > div:nth-of-type(2) {
+   margin-top: 0.7rem;
+}
+
+#fb-login {
+    margin-right: 3.5rem;
+}
+
+
+
+
+
+
+/* sign Up styles */
+.signup-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.signup-main > div:nth-of-type(2) {
+    width: 100%;
+    background-color: #639860;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /*new update*/
+}
+
+#signup-section {
+    width: 40%;
+}
+
+#signup-section > div > form > input {
+    width: 50rem;
+}
+
+#signup {
+    font-size: 1.4rem;
+} 
+
+#signup-img {
+    width: 700px;
+    height: 550px;
+}
+
+#sign-up-heading {
+    min-width: 8rem;
+    text-align: center;
+}
+
+
+.or-hr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.9rem;
+    margin-bottom: 0.9rem;
+    width: 100%;
+}
+
+
+.or-hr > hr {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 47%;
+    display: inline-block;
+    border-top: 1px solid #AD734B;
+}
+
+.or-hr > span {
+    margin: 0 0.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.signup-button {
+    margin-top: 0.7rem;
+    border-radius: 10px;
+    text-transform: lowercase;
+    text-align: center;
+    font-size: 1.6rem;
+    padding-top: 0.3rem;
+}
+
+.signup-button:first-letter {
+    text-transform: uppercase;
+}
+
+
+.sigupWithG-F-contain > button {
+    border: 1px solid #6E577D;
+    background-color: #ffffff;
+    color: #58331a;
+    font-size: 1.6rem;
+    display: block;
+    border-radius: 10px;
+    padding: 0.3rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sigupWithG-F-contain > button:hover {
+    position: relative;
+    top: -2px;
+}
+
+.sigupWithG-F-contain > button:active {
+    background-color: #6E577D;
+    /* position: relative;
+    top: -2px; */
+}
+
+
+.sigupWithG-F-contain > button:nth-of-type(2) {
+    margin-top: 1rem;
+}
+
+#google-signup {
+    width: 1.8rem;
+    height: 1.659rem;
+    margin-left: 0.4rem;
+}
+
+#fb-signup {
+    width: 1.45rem;
+    height: 1.45rem;
+    margin-left: 0.7rem;
+}
+
+
+/* End of sign Up styles */
+
+
+
+@media screen and (max-width: 674px) {
+    #boot-override .login-fg-pass > a{
+        font-size: 1rem;
+    }
+
+    #sign-up-heading {
+        max-width: 6rem;
+    }
+    
+
+    .login-section {
+        margin-top: 4rem;
+        padding: 1.2rem 3rem 7rem 3rem;
+    }
+
+    .gsvlogin-icon {
+        margin-bottom: 1rem;
+    }
+
+    .login-section > div > form > div:nth-of-type(2) {
+        display: none;
+    }
+
+
+     #mobileSigupWithG-F-contain {
+        display: block;
+    }
+
+    #username {
+        margin-bottom: 1.2rem;
+    }
+
+    #password {
+        margin-bottom: 1.2rem;
+    }
+
+
+    .login-section > div > form > input:nth-of-type(1) {
+        margin-bottom: 2rem;
+    }
+
+    
+    .login-section > div > form > input:nth-of-type(2) {
+        margin-bottom: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+    #signup-img {
+        width: 400px;
+        height: 350px;
+    }
+
+    #signup-section {
+        width: 50%;
+    }  
+
+}
+
+@media screen and (max-width: 934px) {
+    .login-section {
+        margin-top: 0;
+    }
+
+    .signup-main > div:nth-of-type(2) {
+        justify-content: center;
+        width: 100%;
+        background-color: #639860;
+        padding: 2rem 3rem;
+    }
+
+
+    /* for signup page */
+    #login-section-marg {
+        margin-top: 2rem;
+    }
+
+    #signup-img {
+        display: none;
+    }
+
+
+    #signup-section {
+        width: 80%;
+    
+    } 
+
+}
+
+@media screen and (max-width: 500px) {
+    .signup-main > div:nth-of-type(2) {
+       padding: 1.5rem 0;
+    }
+
+
+    #signup {
+        font-size: 1rem;
+    } 
+
+}
+
+
+@media screen and (max-width: 428px) {
+    #boot-override .login-fg-pass > a{
+        font-size: 0.8rem;
+    }
+
+}
+
+
+/* for login page */
+@media screen and (min-width: 935px) {
+     /* for login page */
+     #login-anime-contain {
+        max-width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 4rem;
+    }
+    
+    #login-anime {
+        display: block;
+    }
+
+}
+
+@media (min-width: 935px) and (max-width: 1272px) {
+    #login-anime {
+        width: 50%;
+    }
+}

@@ -1,0 +1,500 @@
+body {
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+}
+
+.desktop-header {
+    background-image: none;
+    background-color: #AD734B;
+    padding-bottom: 0;
+    padding-top: 0;
+    border-bottom: 6px solid #6E577D;
+}
+
+.top-search-login {
+    margin-top: 0;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    width: 100%;
+}
+
+#search-input {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.desktop-input-group {
+    margin: 0;
+}
+
+#desktop-nav-brand {
+    padding-bottom: 0;
+}
+
+.gsv {
+    margin-bottom: 0;
+}
+
+#boot-override main {
+    float: left;
+    position: relative;
+    padding: 0.7rem 1.5rem;
+}
+
+.side-nav {
+    background-color: #FFFFFF;
+    width: 19%;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 0.5rem;
+    float: left;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.side-nav-header {
+    margin-bottom: 0;
+    text-align: center;
+    color: #7E6BE8;
+    text-transform: uppercase;
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+
+.side-nav > hr {
+    margin-top: 0;
+}
+
+.side-nav-hr {
+    border-top: 1px solid #AD734B;
+}
+
+.side-nav-ul > li {
+    padding-left: 1rem;
+}
+
+.side-nav-link {
+    text-transform: uppercase;
+    padding-top: 0;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.slide-cart {
+    top: 12%;
+}
+
+.fruit-section {
+    float: right;
+    width: 80%;
+    padding-bottom: 2.5rem;
+}
+
+
+.each-fruit-section {
+    background-color: #FFFFFF;
+    margin-bottom: 0.5rem;
+    box-shadow: 0px 3px 4px rgba(65, 63, 63, 0.25);
+}
+
+
+.fruit-heading {
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 4px rgba(65, 63, 63, 0.25);
+    padding: 0.2rem 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fruit-heading > h1 {
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.fruit-heading > hr {
+    width: 45%;
+    border-top: 1.5px solid #AD734B;
+}
+
+
+.fruit-heading > div > button {
+    background-color: rgba(0, 0, 0, 0);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fruit-heading > div > button > .filter-icon {
+    font-size: 1.8rem;
+    color: #6E577D;
+    margin-left: 5px;
+}
+
+.fruit-heading > div > .dropdown-toggle::after {
+    color: #6E577D;
+    border-top: 0.5em solid;
+    border-right: 0.5em solid transparent;
+    border-left: 0.5em solid transparent;
+}
+
+
+/* filter */
+#boot-override .filter-option-contain {
+    left: -25px!important;
+}
+
+#boot-override .filter-dropdown {
+    padding: 0.375rem 0.75rem;
+}
+
+#boot-override .filter-dropdown:focus {
+    outline: none;
+}
+
+.filter-option-contain > .dropdown-header {
+    font-size: 1.6rem;
+    color: #7E6BE8;
+    font-weight: bold;
+    text-transform: uppercase
+}
+
+.filter-option-contain > li > button {
+    font-size: 1.4rem;
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-left: 0.5rem;
+    min-width: 120px;
+    text-align: left;
+}
+
+.filter-option-contain > li > button:hover {
+    text-decoration: underline;
+}
+
+.filter-option-contain > li > button:focus {
+    text-decoration: underline;
+    outline: none;
+}
+
+.filter-hr {
+    border-top: 1.5px solid #AD734B;
+    margin: 0;
+}
+
+
+.fruit-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.7rem 1.5rem 0.7rem 1rem;
+}
+
+.fruit-category > div:nth-of-type(1) {
+    display: flex;
+}
+
+.fruit-category > div:nth-of-type(1) > div {
+    margin-left: 2rem;
+}
+
+section > div > div div p {
+    margin-bottom: 0.4rem;
+}
+
+.fruit-category > div > a >img {
+    width: 190px;
+    height: 180px;
+}
+
+.fruit-detail > a > h2 {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+    color: #000000;
+}
+
+.fruit-detail > a:hover {
+    text-decoration: none;
+}
+
+.fruit-detail > p {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.fruit-detail > p:nth-of-type(1) {
+    color: #7E6BE8;
+}
+
+.fruit-detail > p:nth-of-type(3) {
+    text-decoration: line-through;
+    margin-bottom: 0;
+    color: #7E6BE8;
+}
+
+
+.rated-star > button {
+    color: #6E577D;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.unrated-star {
+    font-size: 2rem;
+    color: #E5E5E5;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.rated-star > button:focus,
+.unrated-star:focus {
+    outline: none;
+}
+
+.rate-button {
+    color: #639860;;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: bold;
+}
+
+.quantity-container> p:nth-of-type(1) {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: right;
+}
+
+.quantity-container> p:nth-of-type(2) {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.quantity-container > p:nth-of-type(2) > button {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0.9;
+ }
+
+ .quantity-container > p:nth-of-type(2) > button:hover {
+    opacity: 1;
+ }
+
+ .quantity-container > p:nth-of-type(2) > button:focus {
+    outline: none;
+ }
+
+/* .quantity-container > p:nth-of-type(2) > span {
+   background-color: #639860;
+   color: #FFFFFF;
+   padding: 0.4rem 1rem;
+   margin: 0 0.8rem; 
+} */
+
+.quantity-value {
+    background-color: #639860;
+    color: #FFFFFF;
+    padding-left: 8px;
+    width: 30px;
+    margin: 0 1.5rem;
+    /* padding-right: 16px; */
+}
+
+
+#boot-override .add-Cart-Btn {
+    border: 1px solid #639860;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    font-family: 'Castoro', serif;
+    font-size: 1.5rem;
+    margin-top: 6.5rem;
+    color: #639860;;
+}
+
+/* for star rating */
+
+.star {
+    font-size: 20px;
+    color: #E5E5E5;
+    display: inline-block;
+}
+
+.over {
+    color: #dacee2;
+}
+
+.fix {
+    color: #6E577D;
+}
+
+.star-ul {
+    margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .desktop-header {
+        padding-bottom: 0;
+    }
+
+    .top-search-login {
+        display: none;
+    }
+
+    .side-nav {
+        display: none;
+    }
+
+    #boot-override main {
+        float: none;
+        padding: 0;
+    }
+
+    .fruit-section {
+        width: 100%;
+        float: none;
+    }
+
+    .fruit-heading > div > .dropdown-toggle::after {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 553px) {
+    #boot-override .add-Cart-Btn {
+        margin-top: 4.5rem;
+        padding: 0.4rem 0.6rem;
+        font-size: 1rem;
+    }
+
+
+    .fruit-heading > h1 {
+        font-size: 1.5rem;
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .fruit-detail > a > h2 {
+        font-size: 1.4rem;
+    }
+
+    .fruit-heading > .filter-icon {
+        width: 18.72px;
+        height: 24.84px;
+    }
+
+    .fruit-category > div:nth-of-type(1) > div {
+        margin-left: 1.2rem;
+    }
+
+    .fruit-category {
+        padding: 0.5rem 1rem 0.5rem 0.4rem;
+    }
+
+    .fruit-category > div > a > img {
+        width: 100px;
+        height: 130px;
+    }
+
+    .fruit-detail > h2 {
+        font-size: 1.4rem;
+       
+    }
+
+    section > div > div div p {
+        margin-bottom: 0.2rem;
+    }
+    
+    .fruit-detail > p {
+        font-size: 1.05rem;
+    }
+    
+    
+    .star {
+        font-size: 14px;
+    }
+
+    .fruit-detail > p:nth-of-type(5),
+    .fruit-detail > p:nth-of-type(6) {
+        margin-bottom: 0;
+    }
+
+    .rate-button {
+        font-size: 1rem;
+        margin-top: 0.2rem;
+    }
+    
+    .quantity-container> p:nth-of-type(1) {
+        font-size: 1.4rem;
+    }
+
+    .quantity-container > p:nth-of-type(2) > span {
+        padding: 0.2rem 0.5rem;
+     }
+
+     .quantity-container > p:nth-of-type(2) > button {
+        font-size: 1.4rem;
+     }
+
+     .quantity-value {
+        width: 25px;
+        margin: 0 0.5rem;
+    }
+}
+
+@media screen and (max-width: 347px) {
+    #boot-override .add-Cart-Btn {
+        margin-top: 4.2rem;
+        padding: 0.3rem 0.4rem;
+        font-size: 0.8rem;
+    }
+
+    .fruit-category > div > a > img {
+        width: 76px;
+        height: 118px;
+    }
+
+    .fruit-category > div:nth-of-type(1) > div {
+        margin-left: 0.7rem;
+    }
+
+    .fruit-detail > h2 {
+        font-size: 1.3rem;
+       
+    }
+    
+    .fruit-detail > p {
+        font-size: 0.9rem;
+    }
+    
+
+    .rate-button {
+        font-size: 0.86rem;
+    }
+    
+    .quantity-container> p:nth-of-type(1) {
+        font-size: 1.1rem;
+    }
+
+    .quantity-container > p:nth-of-type(2) > span {
+        padding: 0.1rem 0.4rem;
+        margin: 0 0.5rem;
+     }
+
+}
+
+
+

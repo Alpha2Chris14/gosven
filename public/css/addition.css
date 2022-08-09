@@ -1,0 +1,145 @@
+/* html {
+    height: 100%;
+}  */
+
+#boot-override main {
+    display: block;
+    /* height: auto; */
+}
+
+
+
+#boot-override .contact-about-hr {
+    width: 45%;
+}
+
+.fruit-heading {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+.login-section {
+    margin: 0 auto;
+    margin-bottom: 3rem;  /*new update*/
+    max-width: 55%;
+}
+
+/* #terms-h1 {
+    min-width: 5rem;
+} */
+
+.login-section > h2 {
+    font-size: 2.0rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.addition-hr {
+    border-top: 1.5px solid #AD734B;
+    margin-top: 0;
+}
+
+.addition-p {
+    font-size: 1.8rem;
+}
+
+#boot-override .terms-heading {
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 960px) {
+    .login-section {
+        max-width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .login-section > h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .addition-p {
+        font-size: 1.6rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .login-section {
+        max-width: 85%;
+    }
+}
+
+/* terms and conditions top horizontal rule*/
+@media screen and (max-width: 1208px) {
+    .fruit-heading > hr {
+        width: 38%;
+    }
+}
+
+@media screen and (max-width: 1014px) {
+    .fruit-heading > hr {
+        width: 35%;
+    }
+}
+
+
+@media screen and (max-width: 821px) {
+    .fruit-heading > hr {
+        width: 32%;
+    }
+}
+
+@media screen and (max-width: 662px) {
+    .fruit-heading > hr {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 597px) {
+    .fruit-heading > hr {
+        width: 25%;
+    }
+}
+
+
+@media screen and (max-width: 395px) {
+    .fruit-heading > hr {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 332px) {
+    .fruit-heading > hr {
+        width: 15%;
+    }
+}
+
+/* contact us and about us top horizontal rule*/
+@media screen and (max-width: 1090px) {
+    #boot-override .contact-about-hr {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 786px) {
+    #boot-override .contact-about-hr {
+        width: 38%;
+    }
+}
+
+@media screen and (max-width: 569px) {
+    #boot-override .contact-about-hr {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 333px) {
+    #boot-override .contact-about-hr {
+        width: 30%;
+    }
+}

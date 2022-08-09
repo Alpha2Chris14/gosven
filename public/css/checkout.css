@@ -1,0 +1,298 @@
+#boot-override main {
+    padding-bottom: 7rem;
+}
+
+.login-section > form  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-section > form  > section  {
+    width: 80%;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+.section-anime {
+    display: flex;
+    justify-content: space-around;
+}
+
+.section-anime > img {
+    width: 500.09px;
+    height: 800px;
+}
+
+.login-section  {
+    padding: 1rem 1.5rem 5rem 1.5rem;
+    max-width: 50%;
+}
+
+#section-cout-hr {
+    width: 80%;
+    margin-top: 1rem;
+}
+
+.checkout-hr {
+    border-top: 1.5px solid #AD734B;
+    margin-top: 0;
+    width: 100%;
+}
+
+#boot-override .checkout-input {
+    display: block;
+    width: 100%;
+    background-color: #f1eeee;
+    margin-bottom: 1rem;
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    border-radius: 10px;
+    font-size: 1.6rem;
+}
+
+#boot-override .checkout-heading {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.checkout-heading > label {
+    margin-bottom: 0;
+}
+
+.login-section > form  {
+    width: 100%;
+    
+}
+
+.login-section > form > section:nth-of-type(1) > p {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.login-section > form > section:nth-of-type(1) > p > a {
+    color: #7E6BE8;
+}
+
+
+
+#strict-note > p:nth-of-type(1) {
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #D00A0A;
+    min-width: 15%;
+    font-size: 1.7rem;
+
+}
+
+#strict-note > p:nth-of-type(2) {
+   width: 85%;
+   float: right;
+   font-weight: bold;
+   font-size: 1.7rem;
+   margin-bottom: 2.5rem;
+}
+
+#delivery-time {
+    clear: both;
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+}
+
+#payment-contain {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;;
+}
+
+#payment-contain > p {
+    align-self: flex-start;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.2rem;
+}
+
+#payment-contain > div {
+    width: 90%;
+}
+
+#payment-contain > div > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#payment-total-contain > span:nth-of-type(2) {
+    color: #7E6BE8;
+}
+
+#payment-contain > div > div > span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#checkout-buttons-contain {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#checkout-buttons-contain > button {
+    background-color: #639860;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+#checkout-buttons-contain > a {
+    background-color: #639860;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
+#checkout-buttons-contain > button:hover,
+#checkout-buttons-contain > a:hover {
+    color: #FFFFFF;
+    position: relative;
+    top: -2px; 
+    text-decoration: none;
+}
+
+#checkout-buttons-contain > button:active,
+#checkout-buttons-contain > a:active {
+    color: #000000;  
+}
+
+#checkout-buttons-contain > button:focus,
+#checkout-buttons-contain > a:focus {
+    outline: 0;
+}
+
+@media screen and (max-width: 1200px) {
+    .section-anime > img {
+        width: 400.09px;
+        height: 800px;
+    }
+}
+
+/* for strict note */
+@media screen and (max-width: 940px) {
+    #strict-note > p:nth-of-type(1) {
+        float: none;
+        width: auto;
+        margin-bottom: 0;
+    }
+    
+    #strict-note > p:nth-of-type(2) {
+        float: none;
+        width: auto;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 934px) {
+    .login-section {
+        max-width: 70%;
+        margin-top: 1rem;
+    }
+
+    .section-anime {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .section-anime > img {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .login-section {
+        max-width: 90%;
+    }
+    
+}
+
+
+@media screen and (max-width: 594px) {
+    .login-section > form  > section:nth-of-type(1) > p {
+        font-size: 1.2rem;
+    }
+    
+    #checkout-buttons-contain {
+        width: 100%;
+    }
+
+    #checkout-buttons-contain > button {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+    }
+
+    #checkout-buttons-contain > a {
+        font-size: 1rem;
+        padding: 0.7rem 1rem;
+    }
+
+    #boot-override .checkout-heading {
+        font-size: 1.7rem;
+    }
+
+    #boot-override .checkout-input {
+        font-size: 1.4rem;
+    }
+
+    #strict-note > p:nth-of-type(1) {
+        font-size: 1.5rem;
+    
+    }
+    
+    #strict-note > p:nth-of-type(2) {
+       font-size: 1.5rem;
+    }
+
+    #delivery-time {
+        font-size: 1.7rem;
+    }
+
+    #payment-contain > div > div > span {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #delivery-time {
+        font-size: 1.5rem;
+    }
+
+    #checkout-buttons-contain > button {
+        font-size: 0.9rem;
+        padding: 0.9rem 0.3rem;
+    }
+
+    #checkout-buttons-contain > a {
+        font-size: 0.9rem;
+        padding: 0.9rem 0.3rem;
+    }
+
+    #strict-note > p:nth-of-type(1) {
+        font-size: 1.4rem;
+    
+    }
+    
+    #strict-note > p:nth-of-type(2) {
+       font-size: 1.4rem;
+    }
+}
+

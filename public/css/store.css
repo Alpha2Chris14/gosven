@@ -1,0 +1,254 @@
+.store-good {
+    width: 75%;
+}
+
+.store-ed-quantity {
+    width: 15%;
+}
+
+.store-delete-form {
+    display: inline-block;
+}
+
+.store-edit-delete-contain {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-icon {
+    width: 20px;
+    height: 25px;
+}
+
+.edit-icon {
+    width: 23.75px;
+    height: 23.75px;
+}
+
+.fruit-detail > p:nth-of-type(1) {
+    color: #000000;
+}
+
+.fruit-detail > p:nth-of-type(2) {
+    color: #7E6BE8;
+}
+
+.fruit-detail {
+    width: 100%;
+}
+
+.fruit-detail > h2 {
+    margin-bottom: 0.4rem;
+}
+
+.fruit-detail > p {
+    font-size: 1.4rem;
+}
+
+.fruit-detail > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.fruit-detail > div > p {
+    display: inline-block;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+
+.fruit-detail > div > p:nth-of-type(2) {
+    background-color: #639860;
+    color: #FFFFFF;
+    padding: 0.4rem 1rem;
+}
+
+.fruit-detail > p:nth-of-type(4) {
+   font-size: 1.4rem;
+}
+
+
+.quantity-amount {
+    position: relative;
+    left: 35%;
+}
+
+
+.rated-star > button {
+    font-size: 2rem;
+}
+
+.unrated-star {
+    font-size: 2rem;
+}
+
+.fruit-detail > p:nth-of-type(3) {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0);
+ }
+
+ /*awaiting confirmation sell.html */
+ .sell-body {
+    height: 100%;
+}
+
+.sell-body > main {
+    height: 87%;
+}
+
+
+ #awaiting-contain {
+     display: block;
+ }
+
+#awaiting-contain > hr {
+     border-top: 1.5px solid #AD734B;
+}
+
+#awaiting-contain > hr:nth-of-type(2) {
+    display: none;
+}
+
+#awaiting-contain > p {
+    font-size: 1.8rem;
+}
+
+
+
+/* mobile view awaiting confirmation sell.html */
+@media screen and (max-width: 768px) {
+    .sell-body {
+        height: 100%;
+    }
+
+    .sell-body > main {
+        height: 85%;
+    }
+    #sell-section {
+        max-width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+        padding-bottom: 5rem;
+    }
+
+
+    #awaiting-contain > hr:nth-of-type(2) {
+        display: block;
+    }
+
+
+    #awaiting-contain > p {
+        font-size: 1.6rem;
+    }
+}
+
+/* Adjust the quantity remaining */
+@media screen and (max-width: 1172px) {
+    .quantity-amount {
+        left: 40%;
+    }
+}
+
+@media screen and (max-width: 906px) {
+    .quantity-amount {
+        left: 50%;
+    }
+}
+
+@media screen and (max-width: 553px) {
+    .store-good {
+        width: 70%;
+    }
+
+    .store-ed-quantity {
+        width: 20%;
+    }
+
+
+    .delete-icon {
+        width: 13.58px;
+        height: 16.67px;
+    }
+    
+    .edit-icon {
+        width: 16.13px;
+        height: 15.83px;
+    }
+
+    .quantity-amount {
+        left: 60%;
+    }
+
+    .fruit-detail > div > p:nth-of-type(2) {
+        padding: 0.2rem 0.5rem;
+    }
+
+    .fruit-detail > p {
+        font-size: 1.05rem;
+    }
+
+    .fruit-detail > p:nth-of-type(4) {
+        font-size: 1.05rem;
+     }
+
+     .fruit-detail > div > p {
+        font-size: 1.05rem;
+    }
+
+    .rated-star > button {
+        font-size: 1.4rem;
+    }
+    
+    .unrated-star {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .fruit-detail > h2 {
+        font-size: 1.3rem;
+    }
+
+    .fruit-detail > p {
+        font-size: 0.9rem;
+    }
+
+    .fruit-detail > p:nth-of-type(4) {
+        font-size: 0.9rem;
+     }
+
+     .fruit-detail > div > p {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media screen and (max-width: 388px) {
+    .quantity-amount {
+        left: 65%;
+    }
+}
+
+
+@media screen and (max-width: 300px) {
+    .fruit-category > .store-good > img {
+        height: 110px;
+    }
+
+    .store-good {
+        width: 75%;
+    }
+
+    .store-ed-quantity {
+        width: 19%;
+    }
+
+    .quantity-amount {
+        left: 50%;
+    }
+}
+
